@@ -9,6 +9,8 @@ steps:
             'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest',
             '--cache-from',
             'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest',
+            '--file',
+            'gcp-artifact-registry/Dockerfile',
             '.'
           ]
 
