@@ -4,19 +4,19 @@ steps:
     args: [
             'build',
             '-t',
-            'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/my-app:${SHORT_SHA}',
+            'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:${SHORT_SHA}',
             '-t',
-            'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/my-app:latest',
+            'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest',
             '--cache-from',
-            'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/my-app:latest',
+            'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest',
             '.'
           ]
 
   # Docker push to Google Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push',  'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/my-app:${SHORT_SHA}']
+    args: ['push',  'northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:${SHORT_SHA}']
 
 # Store images in Google Artifact Registry 
 images:
-  - northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/my-app:${SHORT_SHA}
-  - northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/my-app:latest
+  - northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:${SHORT_SHA}
+  - northamerica-northeast1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest
