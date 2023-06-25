@@ -8,7 +8,7 @@ WORKDIR $APP_HOME
 COPY . ./
 
 # Install production dependencies form the requirements.txt file
-RUN pip install -r requirements.txt
+RUN pip install -r gcp-artifact-registry/requirements.txt
 
 # Startup command to serve our app
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 main:app
