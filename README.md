@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @groovyhoon
-- 👀 I’m interested in Data Science and Data Engineering. 
-- 🌱 I’m currently learning Machine Learning and PySpark. 
-- 💞️ I’m looking to collaborate on Machine Learning Projects. 
-- 📫 How to reach me: email to joshkim1029@gmail.com
+- 👀 I am currently a Senior Data Science and MLOps Engineer. 
+- 🌱 I'm also a content creator at Medium. 
+- 💞️ I’m actively learning better ways to build end-to-end Machine Learning Pipelines. 
+- 📫 Checkout my stories in https://medium.com/@groovyhoon/
 
 <!---
 groovyhoon/groovyhoon is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
