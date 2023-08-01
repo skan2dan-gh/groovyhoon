@@ -4,11 +4,11 @@ steps:
     args: [
             'build',
             '-t',
-            'us-central1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:${SHORT_SHA}',
+            'us-central1-docker.pkg.dev/prime-prism-394306/test-repo/test-image:${SHORT_SHA}',
             '-t',
-            'us-central1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest',
+            'us-central1-docker.pkg.dev/prime-prism-394306/test-repo/test-image:latest',
             '--cache-from',
-            'us-central1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest',
+            'us-central1-docker.pkg.dev/prime-prism-394306/test-repo/test-image:latest',
             '--file',
             'gcp-artifact-registry/Dockerfile',
             '.'
@@ -16,9 +16,9 @@ steps:
 
   # Docker push to Google Artifact Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push',  'us-central1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:${SHORT_SHA}']
+    args: ['push',  'us-central1-docker.pkg.dev/prime-prism-394306/test-repo/test-image:${SHORT_SHA}']
 
 # Store images in Google Artifact Registry 
 images:
-  - us-central1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:${SHORT_SHA}
-  - us-central1-docker.pkg.dev/groovyhoon-dev/test-repo/test-image:latest
+  - us-central1-docker.pkg.dev/prime-prism-394306/test-repo/test-image:${SHORT_SHA}
+  - us-central1-docker.pkg.dev/prime-prism-394306/test-repo/test-image:latest
